@@ -1,4 +1,4 @@
-CREATE SCHEMA `knowlodge` ;
+CREATE SCHEMA `knowledge` ;
 
 CREATE TABLE `knowledge`.`k_links` (
   `idbooklink` INT NOT NULL AUTO_INCREMENT,
@@ -15,3 +15,9 @@ COMMENT = 'konwledge URL links .';
 ALTER TABLE `knowledge`.`k_links` 
 CHANGE COLUMN `who` `who` VARCHAR(45) NULL DEFAULT NULL COMMENT 'who create the link item .' AFTER `idbooklink`,
 CHANGE COLUMN `type` `what_type` VARCHAR(45) NULL DEFAULT NULL AFTER `what`;
+
+ALTER TABLE `knowledge`.`k_links` 
+CHANGE COLUMN `when` `when` DATETIME NOT NULL DEFAULT NOW() COMMENT 'the link create time .' ;
+
+
+SELECT * FROM knowledge.k_links;
