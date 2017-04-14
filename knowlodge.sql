@@ -19,5 +19,7 @@ CHANGE COLUMN `type` `what_type` VARCHAR(45) NULL DEFAULT NULL AFTER `what`;
 ALTER TABLE `knowledge`.`k_links` 
 CHANGE COLUMN `when` `when` DATETIME NOT NULL DEFAULT NOW() COMMENT 'the link create time .' ;
 
+ALTER TABLE `knowledge`.`k_links` 
+CHANGE COLUMN `what` `what` TEXT NOT NULL COMMENT 'what the link item information ?' ;
 
 SELECT * FROM knowledge.k_links;
